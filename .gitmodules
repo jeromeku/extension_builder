@@ -1,3 +1,7 @@
 [submodule "src/extension_builder/csrc/third_party/cutlass"]
 	path = src/extension_builder/csrc/third_party/cutlass
 	url = https://github.com/nvidia/cutlass
+[submodule "triton-aot"]
+	path = triton-aot
+	url = https://github.com/jeromeku/triton
+	branch = aot-refactor-tracing

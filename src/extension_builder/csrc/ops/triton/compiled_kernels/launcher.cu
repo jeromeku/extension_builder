@@ -53,7 +53,6 @@ int main(int argc, char **argv)
     cuInit(0);
     cuDeviceGet(&dev, 0);
     cuCtxCreate(&ctx, 0, dev);
-
     cuMemAlloc(&A, M * K * 2);
     cuMemAlloc(&B, K * N * 2);
     cuMemAlloc(&C, M * N * 4);

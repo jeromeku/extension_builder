@@ -69,6 +69,12 @@ class Builder(ABC):
         This function should return a list of cxx compilation flags for extensions.
         """
 
+    def ld_flags(self) -> List[str]:
+        """
+        This function should return a list of ld flags for extensions.
+        """
+        return []
+
     @abstractmethod
     def nvcc_flags(self) -> List[str]:
         """
@@ -162,7 +168,7 @@ class Builder(ABC):
             extra_include_paths=self.strip_empty_entries(self.include_dirs()),
             extra_cflags=self.cxx_flags(),
             extra_cuda_cflags=self.nvcc_flags(),
-            extra_ldflags=[],
+            extra_ldflags=self.ld_flags(),
             build_directory=build_directory,
             verbose=verbose,
         )

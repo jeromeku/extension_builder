@@ -13,7 +13,7 @@ from extension_builder import MODULE_ROOT
 
 from .utils import check_cuda_availability, check_system_pytorch_cuda_match
 
-CSRC_DIR = MODULE_ROOT / "csrc"
+CSRC_DIR = MODULE_ROOT.parent / "csrc"
 KERNEL_DIR = CSRC_DIR / "ops"
 THIRDPARTY_DIR = CSRC_DIR / "third_party"
 
